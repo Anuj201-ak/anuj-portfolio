@@ -27,7 +27,7 @@ const Hero = () => {
           <a href="https://www.instagram.com/anuj_473737?igsh=MTFnMHlnY3JvdHh0NQ==" className="social-icon"><FaInstagram /></a>
           <a href="https://github.com/Anuj201-ak" target="_blank" rel="noopener noreferrer" className="social-icon"><FaGithub /></a>
           <a href="http://in.linkedin.com/in/anuj-kumar-5481b9382" target="_blank" rel="noopener noreferrer" className="social-icon"><FaLinkedinIn /></a>
-          <a href="http://in.linkedin.com/in/anuj-kumar-5481b9382" target="_blank" rel="noopener noreferrer" className="social-icon"><FaEnvelope /></a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=anuj32737@gmail.com" target="_blank" rel="noopener noreferrer" className="social-icon"><FaEnvelope /></a>
 
         </div>
       </div>
