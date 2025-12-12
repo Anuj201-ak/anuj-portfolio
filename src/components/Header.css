@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%; /* Adjusted padding to look sleeker */
+  background-color: transparent; /* Starts transparent */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+/* Adds white background only when scrolling */
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 1rem 5%;
+}
+
+/* Logo Styling: "Anuj" black, "." pink */
+.logo {
+  font-size: 2rem;
+  font-weight: 900; /* Extra bold like screenshot */
+  color: #000;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #ec4899; /* The pink dot */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 3rem; /* Spacing between links */
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4b5563; /* Dark gray text */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.nav-links li a:hover {
+  color: #b02cd6; /* Hover color */
+}
+
+/* "Let's Chat" Button */
+.chat-btn {
+  background: linear-gradient(90deg, #b02cd6 0%, #ec4899 100%); /* Purple-Pink Gradient */
+  color: white;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px; /* Slightly rounded corners */
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.chat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden on mobile for now */
+  }
+}

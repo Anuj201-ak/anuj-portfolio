@@ -1,0 +1,212 @@
+.projects-section {
+  padding: 5rem 5%;
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* --- Left Side: Slider Styling --- */
+.project-slider {
+  flex: 1.2;
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Card Effect */
+.slider-card-bg {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-gradient);
+  opacity: 0.1;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.slider-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Slider Controls (Arrows) */
+.slider-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+}
+
+.control-btn {
+  background: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background: var(--primary-gradient);
+  color: white;
+}
+
+/* --- Right Side: Content Styling --- */
+.project-content {
+  flex: 1;
+}
+
+.project-category {
+  display: inline-block;
+  background: rgba(176, 44, 214, 0.1);
+  color: #b02cd6;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.project-desc {
+  color: var(--text-gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: #f3f4f6;
+  color: var(--text-dark);
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-view {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.btn-view:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(176, 44, 214, 0.3);
+}
+
+.btn-github {
+  background: transparent;
+  border: 1px solid #333;
+  color: var(--text-dark);
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.3s;
+}
+
+.btn-github:hover {
+  background: #333;
+  color: white;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background: #b02cd6;
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-container {
+    flex-direction: column;
+  }
+  
+  .project-slider {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .project-content {
+    text-align: center;
+  }
+  
+  .tech-stack, .project-buttons, .pagination-dots {
+    justify-content: center;
+  }
+
+  .slider-controls {
+    display: none; /* Hide arrows on mobile, use dots */
+  }
+}
